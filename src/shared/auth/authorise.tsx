@@ -8,6 +8,8 @@ export default class Authorise extends React.Component{
     var idToken = params.get('id_token') as string;
     return <UserContext.Consumer>
       { (user) => {
+        window.localStorage.setItem('token', idToken);
+        
         user.auth = { token: idToken };
         user.isAuthenticated = true;
         return <UserContext.Provider value={user}> 

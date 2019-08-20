@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
 
-import { PrivateRoute } from './shared/auth/private-route';
+import { SecureRoute } from './shared/auth/secure-route';
 
 import Header from './shared/header';
 import Sidebar from './shared/sidebar';
@@ -24,7 +24,7 @@ const App: React.FC = () => {
     <Router>
       <div className="App">
         <Header></Header>
-        <PrivateRoute path="/" component={Main}></PrivateRoute>
+        <SecureRoute path="/" component={Main}></SecureRoute>
         <Route path="/login" component={Login}></Route>
         <Route path="/authorise" component={Authorise}></Route>
       </div>

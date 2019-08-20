@@ -7,8 +7,8 @@ export default class Login extends React.Component{
     const style = {
       display: 'flex',
       height: 'calc(100vh - 85px)',
-      'justify-content': 'center',
-      'align-items': 'center'
+      justifyContent: 'center',
+      alignItems: 'center'
     };
 
     return <UserContext.Consumer> 

@@ -2,9 +2,9 @@ import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import { UserContext } from './user-context';
 
-export const PrivateRoute = ({ component: Component, ...rest }: any) => {
+export const SecureRoute = ({ component: Component, ...rest }: any) => {
   return (
-    // PrivateRoute asks like a middleware to a real route with some conditional logic.
+    // SecureRoute asks like a middleware to a real route with some conditional logic.
     <Route {...rest} render={ (props: JSX.IntrinsicAttributes) =>
       <UserContext.Consumer>
         {
